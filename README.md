@@ -5,8 +5,10 @@ This project is done by Adarsh Stalu
 
 Date : 12/02/24
 
-# Brief Description - Sports team manager.(comp1006-as1)
-    This project serves as a sports team manager application. It enables users to input player names and their roles within a football team. The implementation involves the utilization of two tables hosted on an AWS Server to store and output the input values. The project consists of three pages, including a form for data input. 
+# comp1006-as1
+# Brief Description - Sports team manager.
+    This project serves as a sports team manager application.
+    It enables users to input player names and their roles within a football team. The implementation involves the utilization of two tables hosted on an AWS Server to store and output the input values. The project consists of three pages, including a form for data input. 
 
 
                 
