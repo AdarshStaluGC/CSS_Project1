@@ -19,6 +19,7 @@ include('shared/header.php'); ?>
         <select name="role" id="role" required>
        
        <?php
+
 // connecting to my database using the shared datab.php file
 include('shared/datab.php');
 
@@ -29,11 +30,13 @@ include('shared/datab.php');
             $role = $cmd->fetchAll();
 
 // loop through list of player positions.
+//this part is for the dropdown menu for the player positions
             foreach ($role as $role) {
                 echo '<option>' . $role['name'] . '</option>';
-            }//this part is for the dropdown menu for the player positions
-            // disconnect
-            $db = null; // existing the database 
+            }
+
+// disconnecting from the database
+            $db = null; 
             ?>
         </select>
     </fieldset>
