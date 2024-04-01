@@ -5,6 +5,7 @@
 
  # comp1006-Assignment 2
  This Work is done by Adarsh Stalu
+ St.No: 200564265
  Date: 31/03/2024
 
 # Brief Description - Sports team manager.
@@ -15,7 +16,6 @@
     The project consists of three pages, including a form for data input. 
 
 # Link to my live AWS Website
-
 
                 
 
