@@ -3,6 +3,8 @@
 # comp1006-as1
  Submitted Date : 12/02/24
 
+ This is the same repository used for Assignment 1
+
  # comp1006-Assignment 2
  This Work is done by Adarsh Stalu
  St.No: 200564265
