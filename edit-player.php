@@ -19,9 +19,11 @@ if (is_numeric($playerId)) {
         $cmd->execute();
         $player = $cmd->fetch();  // use fetch() for 1 record
 
+
         $name = $player['name'];
         $country = $player['country'];
         $role = $player['role'];
+        $photo = $player['photo'];  // fill var w/show photo name if there is one
 
     }
     catch (Exception $err) {
@@ -71,6 +73,18 @@ if (is_numeric($playerId)) {
         </select>
     </fieldset>
     <input type="hidden" name="playerId" id="playerId" value="<?php echo $playerId; ?>" />
+    
+    <fieldset>
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" />
+        <input type="hidden" id="currentPhoto" name="currentPhoto" value="<?php echo $photo; ?>" />
+        <?php
+        if ($photo != null) {
+            echo '<img src="img/uploads/' . $photo . '" alt="Show Photo" />';
+        }
+        ?>
+    </fieldset>
+
     <button class="offset-button">Submit</button>
 </form>
 </main>

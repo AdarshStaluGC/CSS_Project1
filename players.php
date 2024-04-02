@@ -31,7 +31,7 @@
 
         <td>';
         if ($players['photo'] != null) {
-            echo '<img src="img/uploads/' . $players['photo'] . '" />';
+            echo '<img src="img/uploads/' . $players['photo'] . '" class="thumbnail" />';
         }
         echo '</td>
 
