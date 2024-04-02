@@ -14,8 +14,9 @@
     This project serves as a sports team manager application.
     It enables users to input player names and their roles within a football team. 
     This application also allows user to login, edit and delete their input from the database and to upload files to our system for creating their dream team.
-    The implementation involves the utilization of two tables hosted on an AWS Server to store and output the input values. 
-    The project consists of three pages, including a form for data input. 
+    
+    The implementation involves the utilization  tables hosted on an AWS Server to store and output the input values. 
+    The Project is done on the base of Assignment 1 
 
 # Link to my live AWS Website
 

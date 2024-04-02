@@ -29,6 +29,14 @@
         <td style="padding: 0 10px;">' . $players['name'] . '</td>
         <td style="padding: 0 10px;">' . $players['country'] . '</td>
         <td style="padding: 0 10px;">' . $players['role'] . '</td>
+        <td>
+            <a href="edit-player.php?playerId=' . $players['playerId'] . '">
+                Edit
+            </a>&nbsp;
+            <a href="delete-player.php?playerId=' .$players['playerId'] . '" onclick="return confirmDelete();">
+                Delete
+            </a>
+        </td>
         </tr>';
           }
 
