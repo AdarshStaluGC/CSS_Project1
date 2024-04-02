@@ -7,7 +7,7 @@ $title = 'Add Show';
 include('shared/header.php'); ?>
 
 <h1>Add a new player</h1>
-<form method="post" action="insert-player.php">
+<form method="post" action="insert-player.php" enctype="multipart/form-data">
     <fieldset>
         <label for="name">Player Name: *</label>
         <input name="name" id="name" required />
@@ -41,6 +41,10 @@ include('shared/datab.php');
             $db = null; 
             ?>
         </select>
+    </fieldset>
+    <fieldset>
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" />
     </fieldset>
     <br> 
     <button class="offset-button">Submit</button>

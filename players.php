@@ -20,7 +20,7 @@
 
 //Showing the Language list
     echo '<h1>Player List</h1>';
-    echo '<table><thead><th>Name</th><th>Country</th><th>Role</th>';
+    echo '<table><thead><th>Photo</th><th>Name</th><th>Country</th><th>Role</th>';
     if (!empty($_SESSION['username'])) {
         echo '<th>Actions</th>';
     }
@@ -28,6 +28,13 @@
 // looping through the data result from the query, and displaying each show name
     foreach ($players as $players) {
         echo '<tr>
+
+        <td>';
+        if ($players['photo'] != null) {
+            echo '<img src="img/uploads/' . $players['photo'] . '" />';
+        }
+        echo '</td>
+
         <td>' . $players['name'] . '</td>
         <td>' . $players['country'] . '</td>
         <td>' . $players['role'] . '</td>';
