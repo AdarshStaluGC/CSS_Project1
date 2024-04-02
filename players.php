@@ -20,25 +20,29 @@
 
 //Showing the Language list
     echo '<h1>Player List</h1>';
-//Added some css to the table for better look.
-    echo '<table style="border-spacing: 10px;"><thead><th>Name</th><th>Country</th><th>Role</th></thead>';
-
+    echo '<table><thead><th>Name</th><th>Country</th><th>Role</th>';
+    if (!empty($_SESSION['username'])) {
+        echo '<th>Actions</th>';
+    }
+    echo '</thead>';
 // looping through the data result from the query, and displaying each show name
     foreach ($players as $players) {
         echo '<tr>
-        <td style="padding: 0 10px;">' . $players['name'] . '</td>
-        <td style="padding: 0 10px;">' . $players['country'] . '</td>
-        <td style="padding: 0 10px;">' . $players['role'] . '</td>
-        <td>
-            <a href="edit-player.php?playerId=' . $players['playerId'] . '">
-                Edit
-            </a>&nbsp;
-            <a href="delete-player.php?playerId=' .$players['playerId'] . '" onclick="return confirmDelete();">
-                Delete
-            </a>
-        </td>
-        </tr>';
-          }
+        <td>' . $players['name'] . '</td>
+        <td>' . $players['country'] . '</td>
+        <td>' . $players['role'] . '</td>';
+        if (!empty($_SESSION['username'])) {
+            echo '<td class="actions">
+                <a href="edit-player.php?playerId=' . $players['playerId'] . '">
+                    Edit
+                </a>&nbsp;
+                <a href="delete-player.php?playerId=' .$players['playerId'] . '" onclick="return confirmDelete();">
+                    Delete
+                </a>
+            </td>';
+        }
+        echo '</tr>';
+}
 
 // end of the list
     echo '</table>';
@@ -46,5 +50,6 @@
 //disconnect
     $db = null;
 ?>
+</main>
 </body>
 </html>

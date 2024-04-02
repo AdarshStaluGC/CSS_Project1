@@ -1,4 +1,5 @@
 <?php 
+include('shared/auth.php');
 $title = 'Edit Player'; //title of the page
 include('shared/header.php'); 
 

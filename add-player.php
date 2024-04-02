@@ -1,4 +1,6 @@
 <?php
+include('shared/auth.php');
+
 $title = 'Add Show';
 
 //including my shared header in this page 
