@@ -23,13 +23,15 @@ include('shared/header.php'); ?>
        <?php
 
 // connecting to my database using the shared datab.php file
-include('shared/datab.php');
+try {
+    // connect
+    include('shared/datab.php');
 
- // set up & run query, store data results
-            $sql = "SELECT * FROM role ORDER BY name";
-            $cmd = $db->prepare($sql);
-            $cmd->execute();
-            $role = $cmd->fetchAll();
+// set up & run query, store data results
+$sql = "SELECT * FROM players ORDER BY name";
+$cmd = $db->prepare($sql);
+$cmd->execute();
+$players = $cmd->fetchAll();
 
 // loop through list of player positions.
 //this part is for the dropdown menu for the player positions
@@ -37,8 +39,13 @@ include('shared/datab.php');
                 echo '<option>' . $role['name'] . '</option>';
             }
 
-// disconnecting from the database
-            $db = null; 
+ // disconnect
+ $db = null;
+}
+catch (Exception $err) {
+    header('location:error.php');
+    exit();
+}
             ?>
         </select>
     </fieldset>

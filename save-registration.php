@@ -6,7 +6,8 @@ $confirm = $_POST['confirm'];
 $ok = true;
 
 // 2. validate inputs
-if (empty($username)) {
+try {
+    if (empty($username)) {
     echo 'Username is required<br />';
     $ok = false;
 }
@@ -55,5 +56,10 @@ $db = null;
 echo 'User Saved';
 
 // 7. redirect to login
+}
 
+catch (Exception $err) {
+    header('location:error.php');
+    exit();
+}
 ?>

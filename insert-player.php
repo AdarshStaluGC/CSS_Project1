@@ -61,9 +61,9 @@ if (empty($role)) {
  
 //if everything is okay, save to the database
 if ($ok == true) {
-    
-//connecting to the database
-    include('shared/datab.php');
+    try {
+        // connect to db
+        include('shared/db.php');
 
 //inserting data into sql table
     $sql = "INSERT INTO players (photo, name, country, role) VALUES (:photo, :name, :country, :role)";
@@ -80,10 +80,15 @@ if ($ok == true) {
     $cmd->execute();
 
 // disconnect from the database
-     $db = null;
-
-// show msg to user
-     echo '   -Player Added to the Team';
+$db = null;
+echo 'Player Saved';
+    $db = null;
+    echo 'Player Saved';
+}
+catch (Exception $err) {
+    header('location:error.php');
+    exit();
+}
  }
  ?>
  </main>

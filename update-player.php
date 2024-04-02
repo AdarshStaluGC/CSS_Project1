@@ -62,8 +62,10 @@ else {
 
 
 if ($ok == true) {
-    // connect to db using the PDO (PHP Data Objects Library)
-    include('shared/datab.php');
+
+    try {
+        // connect to db using the PDO (PHP Data Objects Library)
+        include('shared/db.php');
 
     // set up SQL UPDATE command
     $sql = "UPDATE players SET photo = :photo, name = :name, country = :country, role = :role WHERE playerId = :playerId";
@@ -86,6 +88,10 @@ if ($ok == true) {
 
     // show msg to user
     echo 'Player Updated';
+}
+catch (Exception $err) {
+    header('location:error.php');
+    exit();
 }
 ?>
 </main>
