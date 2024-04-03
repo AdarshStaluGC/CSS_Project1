@@ -19,10 +19,6 @@ body {
     align-items: center;
     width: 100%;
 }
-.navbar-logo {
-    /* Add your logo styles here */
-}
-
 .navbar-items {
     display: flex;
     justify-content: space-between;

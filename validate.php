@@ -1,39 +1,36 @@
 <?php
-// 1. capture form inputs
+// Capture form inputs
 $username = $_POST['username'];
 $password = $_POST['password'];
 
 try {
-// 2. connect
-include('shared/datab.php');
-$sql = "SELECT * FROM users WHERE username = :username";
-$cmd = $db->prepare($sql);
-$cmd->bindParam(':username', $username, PDO::PARAM_STR, 50);
-$cmd->execute();
-$user = $cmd->fetch();
+    // Connect to database
+    include('shared/datab.php');
+    $sql = "SELECT * FROM users WHERE username = :username";
+    $cmd = $db->prepare($sql);
+    $cmd->bindParam(':username', $username, PDO::PARAM_STR, 50);
+    $cmd->execute();
+    $user = $cmd->fetch();
 
-// 3. look for this username
-if (empty($user)) {
-    $db = null;
-    header('location:login.php?invalid=true');
-}
+    // Check if user exists
+    if (empty($user)) {
+        $db = null;
+        header('location:login.php?invalid=true');
+    }
 
-// 4. if we find a user w/this username, check hashed password
-if (!password_verify($password, $user['password'])) {
-    $db = null;
-    header('location:login.php?invalid=true');
-}
-else {
-    // login is valid,  both username + hashed password match user in db
-    // store identity in session object on web server
-    session_start(); // accesses the current session on the server
-    $_SESSION['username'] = $username;
-    $db = null;
-    header('location:players.php');
-}
-}
-catch (Exception $err) {
-header('location:error.php');
-exit();
+    // Verify password
+    if (!password_verify($password, $user['password'])) {
+        $db = null;
+        header('location:login.php?invalid=true');
+    } else {
+        // Start session and store username
+        session_start();
+        $_SESSION['username'] = $username;
+        $db = null;
+        header('location:players.php');
+    }
+} catch (Exception $err) {
+    header('location:error.php');
+    exit();
 }
 ?>

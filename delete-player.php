@@ -1,7 +1,7 @@
 <?php
 include('shared/auth.php');
 
-// read the showId from the url parameter using $_GET   
+// check if the player id exists 
 $playerId = $_GET['playerId'];
 
 if (is_numeric($playerId)) {

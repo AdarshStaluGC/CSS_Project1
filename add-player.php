@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reg.css" />
+    <link rel="stylesheet" href="./css/reg.css" /> <!-- Link to the CSS file -->
 </head>
 
+<body>
 <?php
-include('shared/auth.php');
+include('shared/auth.php'); // Include authentication script
 
-$title = 'Add Show';
+$title = 'Add Show'; // Set page title
 
-//including my shared header in this page 
-include('shared/header.php'); ?>
+// Include shared header
+include('shared/header.php'); 
+?>
 
-<h1>Add a new player</h1>
+<h1>Add a new player</h1> <!-- Page heading -->
+
+<!-- Form for adding a new player -->
 <form method="post" action="insert-player.php" enctype="multipart/form-data">
     <fieldset>
         <label for="name">Player Name: *</label>
@@ -29,40 +33,36 @@ include('shared/header.php'); ?>
         <select name="role" id="role" required>
        
        <?php
+       // Connect to the database and fetch player positions
+       try {
+            include('shared/datab.php'); // Include database connection script
 
-// connecting to my database using the shared datab.php file
-try {
-    // connect
-    include('shared/datab.php');
+            // Set up & run query, store data results
+            $sql = "SELECT * FROM role ORDER BY name";
+            $cmd = $db->prepare($sql);
+            $cmd->execute();
+            $role = $cmd->fetchAll();
 
-    // set up & run query, store data results
-    $sql = "SELECT * FROM role ORDER BY name";
-    $cmd = $db->prepare($sql);
-    $cmd->execute();
-    $role = $cmd->fetchAll();
+            // Loop through list of player positions and create dropdown options
+            foreach ($role as $role) {
+                echo '<option>' . $role['name'] . '</option>';
+            }
 
-    // loop through list of player positions.
-    //this part is for the dropdown menu for the player positions
-    foreach ($role as $role) {
-        echo '<option>' . $role['name'] . '</option>';
-    }
-
-    // disconnect
-    $db = null;
-}
-catch (Exception $err) {
-    header('location:error.php');
-    exit();
-}
+            $db = null; // Disconnect from the database
+        }
+        catch (Exception $err) {
+            header('location:error.php'); // Redirect to error page on exception
+            exit();
+        }
         ?>
         </select>
     </fieldset>
     <fieldset>
         <label for="photo">Photo:</label>
-        <input type="file" id="photo" name="photo" accept="image/*" />
+        <input type="file" id="photo" name="photo" accept="image/*" /> <!-- File input for photo -->
     </fieldset>
     <br> 
-    <button class="offset-button">Submit</button>
+    <button class="offset-button">Submit</button> <!-- Submit button -->
 </form>
 </main>
 </body>

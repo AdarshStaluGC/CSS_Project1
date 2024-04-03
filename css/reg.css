@@ -1,60 +1,60 @@
+/* General styles */
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  h2 {
-    color: #333;
-  }
-  
-  h5 {
-    color: #666;
-  }
-  
-  .err {
-    color: red;
-  }
-  
-  fieldset {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  .offset-button {
-    margin-left: 150px; /* Adjust this value as needed */
-  }
-  
-  #showHide {
-    cursor: pointer;
-  }
-  
-  #pwErr {
-    color: red;
-  }
-  
+  font-family: Arial, sans-serif; /* Set the default font for the body */
+}
+
+h2 {
+  color: #333; /* Set color for h2 headers */
+}
+
+h5 {
+  color: #666; /* Set color for h5 headers */
+}
+
+/* Error styles */
+.err, #pwErr {
+  color: red; /* Set color for error messages */
+}
+
+/* Form styles */
+fieldset {
+  margin-bottom: 20px; /* Add space below each fieldset */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333; /* Style for form labels */
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Style for email and password inputs */
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /* Style for buttons */
+}
+
+button:hover {
+  background-color: #45a049; /* Style for button hover state */
+}
+
+.offset-button {
+  margin-left: 150px; /* Offset for specific buttons */
+}
+
+/* Miscellaneous styles */
+#showHide {
+  cursor: pointer; /* Make showHide element clickable */
+}
