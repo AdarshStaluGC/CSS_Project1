@@ -29,7 +29,7 @@ else {
     session_start(); // accesses the current session on the server
     $_SESSION['username'] = $username;
     $db = null;
-    header('location:shows.php');
+    header('location:players.php');
 }
 }
 catch (Exception $err) {
