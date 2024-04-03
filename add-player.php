@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reg.css" />
+</head>
+
 <?php
 include('shared/auth.php');
 
@@ -27,26 +35,26 @@ try {
     // connect
     include('shared/datab.php');
 
-// set up & run query, store data results
-$sql = "SELECT * FROM players ORDER BY name";
-$cmd = $db->prepare($sql);
-$cmd->execute();
-$players = $cmd->fetchAll();
+    // set up & run query, store data results
+    $sql = "SELECT * FROM role ORDER BY name";
+    $cmd = $db->prepare($sql);
+    $cmd->execute();
+    $role = $cmd->fetchAll();
 
-// loop through list of player positions.
-//this part is for the dropdown menu for the player positions
-            foreach ($role as $role) {
-                echo '<option>' . $role['name'] . '</option>';
-            }
+    // loop through list of player positions.
+    //this part is for the dropdown menu for the player positions
+    foreach ($role as $role) {
+        echo '<option>' . $role['name'] . '</option>';
+    }
 
- // disconnect
- $db = null;
+    // disconnect
+    $db = null;
 }
 catch (Exception $err) {
     header('location:error.php');
     exit();
 }
-            ?>
+        ?>
         </select>
     </fieldset>
     <fieldset>
@@ -59,5 +67,3 @@ catch (Exception $err) {
 </main>
 </body>
 </html>
-
-

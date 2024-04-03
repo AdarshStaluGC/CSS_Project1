@@ -1,0 +1,111 @@
+/* CSS for Player List Page */
+
+/* Resetting default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Setting up box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Styling the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+     font-family: Arial, sans-serif;
+}
+
+/* Styling table headings */
+thead th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px; /* Font size for headings */
+}
+
+/* Styling table cells */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling thumbnail images */
+.thumbnail {
+    width: 50px; /* Set the width of the thumbnail images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the images are displayed as blocks */
+}
+
+/* Styling actions column */
+.actions {
+    text-align: center;
+    padding-left: 20px; /* Adjust this value as needed */
+}
+/* Styling links in actions column */
+.actions a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Styling links in actions column on hover */
+.actions a:hover {
+    text-decoration: underline;
+}
+
+.centered-title {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust this value as needed */
+    font-family: Arial, sans-serif; /* Change this to your desired font */
+    
+
+}
+
+.actions-heading {
+    text-align: center;
+}
+
+/* Styling table cells */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling thumbnail images */
+.thumbnail {
+    width: 50px; /* Set the width of the thumbnail images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the images are displayed as blocks */
+}
+
+/* Styling actions column */
+.actions {
+    text-align: center;
+    padding-left: 20px; /* Adjust this value as needed */
+}
+
+/* Styling actions heading */
+.actions-heading {
+    text-align: center;
+}
+
+/* Styling links in actions column */
+.actions a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Styling links in actions column on hover */
+.actions a:hover {
+    text-decoration: underline;
+}
+
+.centered-title {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust this value as needed */
+}

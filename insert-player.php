@@ -63,7 +63,7 @@ if (empty($role)) {
 if ($ok == true) {
     try {
         // connect to db
-        include('shared/db.php');
+        include('shared/datab.php');
 
 //inserting data into sql table
     $sql = "INSERT INTO players (photo, name, country, role) VALUES (:photo, :name, :country, :role)";

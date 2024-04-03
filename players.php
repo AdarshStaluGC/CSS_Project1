@@ -1,4 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/ply.css" />
+</head>
+
 <?php 
+
 
 //This file is for showing the list of players in the database
 
@@ -19,7 +28,7 @@
     $players= $cmd->fetchAll();
 
 //Showing the Language list
-    echo '<h1>Player List</h1>';
+    echo '<h1 class="centered-title">Player List</h1>';
     echo '<table><thead><th>Photo</th><th>Name</th><th>Country</th><th>Role</th>';
     if (!empty($_SESSION['username'])) {
         echo '<th>Actions</th>';
@@ -39,7 +48,7 @@
         <td>' . $players['country'] . '</td>
         <td>' . $players['role'] . '</td>';
         if (!empty($_SESSION['username'])) {
-            echo '<td class="actions">
+            echo '<td class="">
                 <a href="edit-player.php?playerId=' . $players['playerId'] . '">
                     Edit
                 </a>&nbsp;
