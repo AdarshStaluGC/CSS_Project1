@@ -9,8 +9,12 @@
     <link rel="stylesheet" href="./css/common.css" /> 
 </head>
 <body>
+   
     <!-- Include the shared header -->
-    <?php require 'shared/header.php'; ?>
+    <?php
+     $title = 'Login';  // Define $title before including header.php
+    require 'shared/header.php'; 
+    ?>
 
     <!-- Display the login form -->
     <h2>User Login</h2>

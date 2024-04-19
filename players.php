@@ -8,8 +8,8 @@
 </head>
 <body>
 <?php 
+    $title = 'Player List';  // Define $title before including header.php
     include('shared/header.php'); 
-    $title = 'PlayerList'; 
     include('shared/datab.php');
 
     // Query to fetch all players
