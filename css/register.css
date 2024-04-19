@@ -58,3 +58,51 @@ button:hover {
 #showHide {
   cursor: pointer; /* Make showHide element clickable */
 }
+
+/* Styles for large screens (desktops, laptops) */
+@media screen and (min-width: 768px) {
+  /* Increase font size for headers */
+  h2, h5 {
+    font-size: 20px;
+  }
+
+  /* Increase padding for form inputs */
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+  }
+
+  /* Increase padding for buttons */
+  button {
+    padding: 15px 30px;
+  }
+
+  /* Adjust offset for specific buttons */
+  .offset-button {
+    margin-left: 200px;
+  }
+}
+
+/* Styles for small screens (smartphones) */
+@media screen and (max-width: 767px) {
+  /* Decrease font size for headers */
+  h2, h5 {
+    font-size: 16px;
+  }
+
+  /* Decrease padding for form inputs */
+  input[type="email"],
+  input[type="password"] {
+    padding: 5px;
+  }
+
+  /* Decrease padding for buttons */
+  button {
+    padding: 5px 10px;
+  }
+
+  /* Adjust offset for specific buttons */
+  .offset-button {
+    margin-left: 50px;
+  }
+}
