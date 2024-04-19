@@ -10,6 +10,20 @@
 <?php 
     $title = 'Player List';  // Define $title before including header.php
     include('shared/header.php'); 
+
+    ?>
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Your Team</h1>
+    </div>
+    <div class="flip-card-back">
+      <h1>Your Players</h1>
+    </div>
+  </div>
+</div>
+
+    <?php 
     include('shared/datab.php');
 
     // Query to fetch all players
@@ -18,8 +32,7 @@
     $cmd->execute();
     $players= $cmd->fetchAll();
 
-    // Display the player list
-    echo '<h1 class="centered-title">Player List</h1>';
+    
     echo '<table><thead><th>Photo</th><th>Name</th><th>Country</th><th>Role</th>';
     if (!empty($_SESSION['username'])) {
         echo '<th>Actions</th>';
