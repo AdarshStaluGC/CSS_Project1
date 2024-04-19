@@ -19,6 +19,7 @@ body {
     align-items: center;
     width: 100%;
 }
+
 .navbar-items {
     display: flex;
     justify-content: space-between;
@@ -27,6 +28,7 @@ body {
     padding: 0; /* remove padding */
     margin-right: auto; /* push all other elements to the right */
 }
+
 .navbar-item {
     display: flex;
     align-items: center; /* center items vertically */
@@ -58,6 +60,7 @@ body {
     position: relative;
     top: 10px; /* adjust as needed */
 }
+
 .username {
     position: relative;
     top: -5px; /* adjust as needed */
@@ -74,4 +77,48 @@ body {
 
 p {
     margin: 20px; /* adjust as needed */
+}
+
+/* Styles for small screens (smartphones) */
+@media screen and (max-width: 767px) {
+    #navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .navbar-items {
+        flex-direction: column;
+        gap: 20px;
+        margin-right: 0;
+    }
+
+    .navbar-item {
+        margin-bottom: 10px;
+    }
+
+    .home-link {
+        margin-right: 0;
+    }
+
+    .container ul {
+        justify-content: center;
+    }
+
+    .profile-icon {
+        width: 20px;
+        height: 20px;
+        top: 5px;
+    }
+
+    .username {
+        top: -2px;
+    }
+
+    p {
+        margin: 10px;
+    }
 }
