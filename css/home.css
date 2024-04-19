@@ -17,7 +17,7 @@ a {
 /* Flip card container */
 .flip-card {
     width: 100%; /* Full width */
-    height: 50px; /* Set height to 50px */
+    height: 50px;
     perspective: 1000px;
   }
   

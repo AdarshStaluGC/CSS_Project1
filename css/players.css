@@ -45,7 +45,7 @@ td {
 /* Styling actions column */
 .actions {
     text-align: center;
-    padding-left: 20px; /* Adjust this value as needed */
+    padding-left: 20px; 
 }
 
 /* Styling links in actions column */
@@ -61,8 +61,8 @@ td {
 
 .centered-title {
     text-align: center;
-    margin-bottom: 20px; /* Adjust this value as needed */
-    font-family: Arial, sans-serif; /* Change this to your desired font */
+    margin-bottom: 20px; 
+    font-family: Arial, sans-serif; 
 }
 
 .actions-heading {

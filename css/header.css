@@ -54,16 +54,16 @@ body {
 }
 
 .profile-icon {
-    width: 30px; /* adjust as needed */
-    height: 30px; /* adjust as needed */
+    width: 30px; 
+    height: 30px; 
     margin-right: 5px; /* space between the icon and the username */
     position: relative;
-    top: 10px; /* adjust as needed */
+    top: 10px; 
 }
 
 .username {
     position: relative;
-    top: -5px; /* adjust as needed */
+    top: -5px; 
 }
 
 .home-link {
@@ -76,7 +76,7 @@ body {
 }
 
 p {
-    margin: 20px; /* adjust as needed */
+    margin: 20px; 
 }
 
 /* Styles for small screens (smartphones) */

@@ -17,7 +17,7 @@ Using CSS, building out the complete visual styles for Assignment 2 of my Introd
 
 # Link to my live AWS Website
 
-https://lamp.computerstudi.es/~Adarsh200564265/
+https://lamp.computerstudi.es/~Adarsh200564265/CSS_Project1/home.php
                 
 
 
