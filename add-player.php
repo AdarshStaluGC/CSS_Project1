@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reg.css" /> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="./css/common.css" /> <!-- Link to the CSS file -->
 </head>
 
 <body>

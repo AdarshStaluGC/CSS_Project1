@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="./css/site.css" />
+<link rel="stylesheet" href="./css/common.css" /> 
 <?php 
     $title = 'Home';
     include('shared/header.php'); 
