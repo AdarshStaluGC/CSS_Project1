@@ -17,8 +17,18 @@
     require('shared/header.php');
     ?>
 
+    <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>User Registration</h1>
+    </div>
+    <div class="flip-card-back">
+      <h1>Please Provide User Info</h1>
+    </div>
+  </div>
+</div>
+
     <!-- Display the registration form -->
-    <h2>User Registration</h2>
     <h5>Passwords must be a minimum of 8 characters,
     including 1 digit, 1 upper-case letter, and 1 lower-case letter.
     </h5>
