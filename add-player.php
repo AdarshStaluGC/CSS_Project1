@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/common.css" /> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="./css/register.css" /> <!-- Link to the CSS file -->
 </head>
 
 <body>
@@ -16,7 +17,16 @@ $title = 'Add Show'; // Set page title
 include('shared/header.php'); 
 ?>
 
-<h1>Add a new player</h1> <!-- Page heading -->
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>Add Player</h1>
+    </div>
+    <div class="flip-card-back">
+      <h1>Create Your Team </h1>
+    </div>
+  </div>
+</div>
 
 <!-- Form for adding a new player -->
 <form method="post" action="insert-player.php" enctype="multipart/form-data">
