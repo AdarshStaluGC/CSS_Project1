@@ -7,6 +7,7 @@
 
     <!-- Link to the CSS stylesheet -->
     <link rel="stylesheet" href="./css/common.css" /> 
+    <link rel="stylesheet" href="./css/register.css" />   <!-- Same CSS is used for registration and login page -->
 </head>
 <body>
    
@@ -16,8 +17,16 @@
     require 'shared/header.php'; 
     ?>
 
-    <!-- Display the login form -->
-    <h2>User Login</h2>
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <h1>User Login</h1>
+    </div>
+    <div class="flip-card-back">
+      <h1>Please Provide User Info</h1>
+    </div>
+  </div>
+</div>
 
     <!-- Check if there was an invalid login attempt -->
     <?php
