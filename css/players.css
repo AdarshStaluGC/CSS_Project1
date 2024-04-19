@@ -18,7 +18,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-     font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 /* Styling table headings */
@@ -47,6 +47,7 @@ td {
     text-align: center;
     padding-left: 20px; /* Adjust this value as needed */
 }
+
 /* Styling links in actions column */
 .actions a {
     color: blue;
@@ -62,50 +63,44 @@ td {
     text-align: center;
     margin-bottom: 20px; /* Adjust this value as needed */
     font-family: Arial, sans-serif; /* Change this to your desired font */
-    
-
 }
 
 .actions-heading {
     text-align: center;
 }
 
-/* Styling table cells */
-td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+/* Styles for large screens (desktops, laptops) */
+@media screen and (min-width: 768px) {
+    /* Increase font size for headings */
+    thead th {
+        font-size: 20px;
+    }
+
+    /* Increase padding for table cells */
+    td {
+        padding: 15px;
+    }
+
+    /* Increase size of thumbnail images */
+    .thumbnail {
+        width: 70px;
+    }
 }
 
-/* Styling thumbnail images */
-.thumbnail {
-    width: 50px; /* Set the width of the thumbnail images */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensures the images are displayed as blocks */
-}
+/* Styles for small screens (smartphones) */
+@media screen and (max-width: 767px) {
+    /* Decrease font size for headings */
+    thead th {
+        font-size: 16px;
+    }
 
-/* Styling actions column */
-.actions {
-    text-align: center;
-    padding-left: 20px; /* Adjust this value as needed */
-}
+    /* Decrease padding for table cells */
+    td {
+        padding: 5px;
+    }
 
-/* Styling actions heading */
-.actions-heading {
-    text-align: center;
-}
-
-/* Styling links in actions column */
-.actions a {
-    color: blue;
-    text-decoration: none;
-}
-
-/* Styling links in actions column on hover */
-.actions a:hover {
-    text-decoration: underline;
-}
-
-.centered-title {
-    text-align: center;
-    margin-bottom: 20px; /* Adjust this value as needed */
+    /* Decrease size of thumbnail images */
+    .thumbnail {
+        width: 30px;
+    }
 }

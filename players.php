@@ -9,7 +9,7 @@
 <body>
 <?php 
     include('shared/header.php'); 
-    $title = 'Player List'; 
+    $title = 'PlayerList'; 
     include('shared/datab.php');
 
     // Query to fetch all players
