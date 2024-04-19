@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title; ?></title> <!-- Dynamic title -->
-    <link rel="stylesheet" href="./css/site.css" /> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="./css/header.css" /> <!-- Link to the CSS file -->
     <script src="./js/scripts.js" defer></script> <!-- Link to the JavaScript file -->
 </head>
 <body>

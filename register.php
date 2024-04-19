@@ -7,6 +7,7 @@
 
     <!-- Link to the CSS stylesheet -->
     <link rel="stylesheet" href="./css/common.css" /> 
+    <link rel="stylesheet" href="./css/register.css" /> 
 </head>
 <body>
     <?php
